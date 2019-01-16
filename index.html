@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Better Postable!</title>
+    <!-- HighlightJS Theme -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/styles/ir-black.min.css"
+    />
+    <!-- Load HighlightJS  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/highlight.min.js"></script>
+
+    <!-- Load clipboardJS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script>
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="code-area-container">
+        <textarea
+          placeholder="Enter your code to be escaped."
+          name="raw"
+          id="raw"
+          class="code"
+          cols="50"
+          rows="10"
+        ></textarea>
+      </div>
+      <div class="code-area-container">
+        <br />
+        <button id="convert-btn" class="post-btn">Convert</button>
+        <button id="copy-btn" class="post-btn" data-clipboard-target="#clean">
+          Copy
+        </button>
+        <textarea
+          placeholder="Click on text to select."
+          onclick="this.focus();this.select()"
+          readonly="readonly"
+          name="clean"
+          id="clean"
+          class="code"
+          cols="50"
+          rows="10"
+        ></textarea>
+      </div>
+
+      <div id="code-preview">
+        <pre>
+        <code  id="code">
+          <p class="code-preview-initial-message">CODE PREVIEW AREA!</p>
+        </code>
+      </pre>
+      </div>
+      <p class="help">
+        Click on output to select. <br />
+        <strong>Coming Soon:</strong>
+          <ul>
+          <li>
+            Shortcut to select
+          </li>
+          <li>
+            Convert and Copy button for unsupported devices!
+          </li>
+        </ul>
+      </p>
+    </div>
+
+    <!-- Get Characters! -->
+    <script src="./charactersObject.js"></script>
+    <script src="./index.js"></script>
+  </body>
+</html>
